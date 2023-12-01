@@ -20,11 +20,12 @@ const listSelectOptions = [
   { value: "wordList5", label: "Word List 5" },
   { value: "sentencePractice5b", label: "Sentence Practice 5B" },
   { value: "wordList6", label: "Word List 6" },
+  { value: "combinedWordList", label: "All Words" },
 ];
 
-const lists = [wordList6];
-
-const combinedLists = (lists) => {
+const combinedWordLists = (
+  lists = [wordList1, wordList2, wordList3, wordList4, wordList5, wordList6]
+) => {
   let combinedList = [];
   lists.forEach((list) => {
     combinedList = combinedList.concat(list);
@@ -40,6 +41,6 @@ export {
   wordList5,
   sentencePractice5b,
   wordList6,
-  combinedLists,
+  combinedWordLists,
   listSelectOptions,
 };

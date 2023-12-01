@@ -36,6 +36,13 @@ function App() {
 
   return (
     <>
+      <select id="selector" onChange={handleListChange}>
+        {listSelectOptions.map((option) => (
+          <option key={option.value} value={option.value}>
+            {option.label}
+          </option>
+        ))}
+      </select>
       <div id="main-container">
         <button onClick={() => handleNextWord(currentList, "prev")}>
           <img
@@ -48,20 +55,13 @@ function App() {
           {currentList.word}
         </p>
         <button onClick={() => handleNextWord(currentList, "next")}>
-          <img
-            src="/angle-right-icon.svg"
-            alt="arrow-next"
-            className="arrow"
-          />
+          <img src="/angle-right-icon.svg" alt="arrow-next" className="arrow" />
         </button>
       </div>
-      <select id="selector" onChange={handleListChange}>
-        {listSelectOptions.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
+      <p id="index-counter">
+        {currentList.list.indexOf(currentList.word) + 1} /{" "}
+        {currentList.list.length}
+      </p>
     </>
   );
 }

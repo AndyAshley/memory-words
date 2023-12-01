@@ -6,6 +6,7 @@ import {
   wordList5,
   sentencePractice5b,
   wordList6,
+  combinedWordLists,
 } from "../data/wordLists";
 
 export const changeList = (value) => {
@@ -57,6 +58,13 @@ export const changeList = (value) => {
         list: wordList6,
         length: wordList6.length,
         word: wordList6[0],
+        type: "word",
+      };
+    case "combinedWordList":
+      return {
+        list: combinedWordLists(),
+        length: combinedWordLists().length,
+        word: combinedWordLists()[0],
         type: "word",
       };
   }
