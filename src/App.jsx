@@ -39,7 +39,7 @@ function App() {
       <div id="main-container">
         <button onClick={() => handleNextWord(currentList, "prev")}>
           <img
-            src="./public/angle-right-icon.svg"
+            src="/angle-right-icon.svg"
             alt="arrow-prev"
             className="arrow prev"
           />
@@ -49,7 +49,7 @@ function App() {
         </p>
         <button onClick={() => handleNextWord(currentList, "next")}>
           <img
-            src="./public/angle-right-icon.svg"
+            src="/angle-right-icon.svg"
             alt="arrow-next"
             className="arrow"
           />
