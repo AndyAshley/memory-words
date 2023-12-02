@@ -2,13 +2,22 @@ import { useState } from "react";
 import "./App.css";
 import { changeList } from "./utility/utility";
 import { wordList1, listSelectOptions } from "./data/wordLists";
+import { getRandomEquation } from "./data/mathChallenges";
 
 function App() {
+  const { equation, answer } = getRandomEquation();
+  const [currentProblem, setCurrentProblem] = useState({
+    equation,
+    answer,
+    type: "math",
+    display: "Math Challenge",
+  });
   const [currentList, setCurrentList] = useState({
     list: wordList1,
     length: wordList1.length,
     word: wordList1[0],
     type: "word",
+    display: "Word List 1",
   });
 
   const handleNextWord = (input, direction) => {
@@ -59,8 +68,9 @@ function App() {
         </button>
       </div>
       <p id="index-counter">
+        {currentList.display} - [
         {currentList.list.indexOf(currentList.word) + 1} /{" "}
-        {currentList.list.length}
+        {currentList.list.length}]
       </p>
     </>
   );

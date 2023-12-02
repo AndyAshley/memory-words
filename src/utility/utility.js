@@ -17,6 +17,7 @@ export const changeList = (value) => {
         length: wordList1.length,
         word: wordList1[0],
         type: "word",
+        display: "Word List 1",
       };
     case "wordList2":
       return {
@@ -24,6 +25,7 @@ export const changeList = (value) => {
         length: wordList2.length,
         word: wordList2[0],
         type: "word",
+        display: "Word List 2",
       };
     case "wordList3":
       return {
@@ -31,6 +33,7 @@ export const changeList = (value) => {
         length: wordList3.length,
         word: wordList3[0],
         type: "word",
+        display: "Word List 3",
       };
     case "wordList4":
       return {
@@ -38,6 +41,7 @@ export const changeList = (value) => {
         length: wordList4.length,
         word: wordList4[0],
         type: "word",
+        display: "Word List 4",
       };
     case "wordList5":
       return {
@@ -45,6 +49,7 @@ export const changeList = (value) => {
         length: wordList5.length,
         word: wordList5[0],
         type: "word",
+        display: "Word List 5",
       };
     case "sentencePractice5b":
       return {
@@ -52,6 +57,7 @@ export const changeList = (value) => {
         length: sentencePractice5b.length,
         word: sentencePractice5b[0],
         type: "sentence",
+        display: "Sentence Practice 5B",
       };
     case "wordList6":
       return {
@@ -59,6 +65,7 @@ export const changeList = (value) => {
         length: wordList6.length,
         word: wordList6[0],
         type: "word",
+        display: "Word List 6",
       };
     case "combinedWordList":
       return {
@@ -66,6 +73,7 @@ export const changeList = (value) => {
         length: combinedWordLists().length,
         word: combinedWordLists()[0],
         type: "word",
+        display: "All Words",
       };
   }
 };
