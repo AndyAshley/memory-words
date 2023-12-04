@@ -16,6 +16,11 @@
   margin: 0px;
 }
 
+[data-type="math"] {
+  font-size: 15vw;
+  margin: 0px;
+}
+
 [data-type="sentence"] {
   font-size: 8vw;
   margin: 0px;
@@ -70,6 +75,22 @@
 }
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  padding-inline: 1rem;
+  position: absolute;
+  bottom: 25px;
+  left: 0px;
+}
+.main-button {
+  background-color: #213547;
+  color: #fff;
+  border-radius: 0.25rem;
 }
 
 @keyframes logo-spin {

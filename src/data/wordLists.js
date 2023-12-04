@@ -1,3 +1,4 @@
+// Word lists based on my sons take home sight word lists
 const wordList1 = ["is", "a", "like", "the", "went", "to"];
 const wordList2 = ["look", "for", "you", "I", "was", "we"];
 const wordList3 = ["she", "little", "have", "my", "said", "no"];
@@ -12,6 +13,7 @@ const sentencePractice5b = [
 ];
 const wordList6 = ["what", "in", "that", "it", "on", "as", "there"];
 
+// for the select dropdown
 const listSelectOptions = [
   { value: "wordList1", label: "Word List 1" },
   { value: "wordList2", label: "Word List 2" },
@@ -23,6 +25,7 @@ const listSelectOptions = [
   { value: "combinedWordList", label: "All Words" },
 ];
 
+// combine all the word lists into one array
 const combinedWordLists = (
   lists = [wordList1, wordList2, wordList3, wordList4, wordList5, wordList6]
 ) => {
@@ -33,6 +36,7 @@ const combinedWordLists = (
   return combinedList;
 };
 
+// export all the word lists
 export {
   wordList1,
   wordList2,

@@ -1,77 +1,38 @@
-import { useState } from "react";
 import "./App.css";
-import { changeList } from "./utility/utility";
-import { wordList1, listSelectOptions } from "./data/wordLists";
-import { getRandomEquation } from "./data/mathChallenges";
+import Math from "./Math";
+import Words from "./Words";
+import { useEffect, useState } from "react";
+import useFindOrientation from "./hooks/useFindOrientatinon";
 
 function App() {
-  const { equation, answer } = getRandomEquation();
-  const [currentProblem, setCurrentProblem] = useState({
-    equation,
-    answer,
-    type: "math",
-    display: "Math Challenge",
-  });
-  const [currentList, setCurrentList] = useState({
-    list: wordList1,
-    length: wordList1.length,
-    word: wordList1[0],
-    type: "word",
-    display: "Word List 1",
-  });
-
-  const handleNextWord = (input, direction) => {
-    const list = input.list;
-    const currentIndex = list.indexOf(input.word);
-    const handleWrap = (index) => {
-      if (index === list.length - 1 && direction === "next") {
-        return 0;
-      }
-      if (index === 0 && direction === "prev") {
-        return list.length - 1;
-      }
-      return direction === "next" ? index + 1 : index - 1;
-    };
-
-    setCurrentList({
-      ...currentList,
-      word: list[handleWrap(currentIndex)],
-    });
-  };
-
-  const handleListChange = (e) => {
-    setCurrentList(changeList(e.target.value));
+  const orientation = useFindOrientation();
+  const [app, setApp] = useState(null);
+  const handleApp = (app) => {
+    switch (app) {
+      case "words":
+        setApp(<Words />);
+        break;
+      case "math":
+        setApp(<Math />);
+        break;
+    }
   };
 
   return (
     <>
-      <select id="selector" onChange={handleListChange}>
-        {listSelectOptions.map((option) => (
-          <option key={option.value} value={option.value}>
-            {option.label}
-          </option>
-        ))}
-      </select>
-      <div id="main-container">
-        <button onClick={() => handleNextWord(currentList, "prev")}>
-          <img
-            src="/angle-right-icon.svg"
-            alt="arrow-prev"
-            className="arrow prev"
-          />
+      {orientation === "portrait" ? (
+        <p>Please rotate your device to landscape mode.</p>
+      ) : (
+        <>{app}</>
+      )}
+      <div className="btn-container">
+        <button className="main-button" onClick={() => handleApp("words")}>
+          Words
         </button>
-        <p id="word-display" data-type={`${currentList.type}`}>
-          {currentList.word}
-        </p>
-        <button onClick={() => handleNextWord(currentList, "next")}>
-          <img src="/angle-right-icon.svg" alt="arrow-next" className="arrow" />
+        <button className="main-button" onClick={() => handleApp("math")}>
+          Math
         </button>
       </div>
-      <p id="index-counter">
-        {currentList.display} - [
-        {currentList.list.indexOf(currentList.word) + 1} /{" "}
-        {currentList.list.length}]
-      </p>
     </>
   );
 }
