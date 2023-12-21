@@ -1,10 +1,38 @@
-#main-container {
+#main-container,
+#math-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-height: 75svh;
   flex-grow: 1;
   position: relative;
+}
+
+#math-container {
+  justify-content: center;
+}
+
+.math_wrapper {
+  display: grid;
+  grid-template-rows: repeat(2, fit-content);
+  grid-template-columns: repeat(2, fit-content);
+}
+
+.first_number {
+  grid-row: 1;
+  grid-column: 2;
+  text-align: right;
+}
+
+.second_number {
+  grid-row: 2;
+  grid-column: 2;
+  text-align: right;
+}
+
+.operator {
+  grid-row: 2;
+  grid-column: 1;
+  text-align: right;
 }
 
 #main-container p {
@@ -17,7 +45,7 @@
 }
 
 [data-type="math"] {
-  font-size: 15vw;
+  font-size: 35vw;
   margin: 0px;
 }
 
@@ -108,4 +136,38 @@
 
 .read-the-docs {
   color: #888;
+}
+
+@media screen and (min-width: 942px) {
+  .math_wrapper {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .first_number {
+    grid-row: 1;
+    grid-column: 1;
+    text-align: center;
+  }
+
+  .second_number {
+    grid-row: 1;
+    grid-column: 3;
+    text-align: center;
+  }
+  .operator {
+    grid-row: 1;
+    grid-column: 2;
+    text-align: center;
+  }
+
+  .padding {
+    padding-left: unset;
+  }
+
+  [data-type="math"] {
+    font-size: 15vw;
+    margin: 0px;
+  }
 }

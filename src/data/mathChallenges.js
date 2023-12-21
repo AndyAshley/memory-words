@@ -21,7 +21,11 @@ const generateRandomEquation = (level = 0) => {
   const secondNumber = getRandomIndex(Object.values(availableNumbers)[level]);
   const operator = getRandomIndex(Object.values(availableOperators)[level]);
 
-  const equation = `${firstNumber} ${operator} ${secondNumber}`;
+  const equation = {
+    firstNumber,
+    secondNumber,
+    operator,
+  };
   let answer;
 
   switch (operator) {

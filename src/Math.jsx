@@ -20,23 +20,36 @@ const Math = () => {
       answer,
     });
   };
+
   return (
     <>
-      <div id="main-container">
-        <div></div>
+      <div id="math-container">
         {showAnswer ? (
-          <p id="word-display" data-type={`${currentProblem.type}`}>
-            {currentProblem.answer}
-          </p>
+          <p data-type={`${currentProblem.type}`}>{currentProblem.answer}</p>
         ) : (
-          <p id="word-display" data-type={`${currentProblem.type}`}>
-            {currentProblem.equation}
-          </p>
+          <div div className="math_wrapper">
+            <div
+              className="first_number"
+              data-type={`${currentProblem.type}`}
+            >
+              {currentProblem.equation.firstNumber}
+            </div>
+            <div className="operator" data-type={`${currentProblem.type}`}>
+              {currentProblem.equation.operator}
+            </div>
+            <div
+              className="second_number"
+              data-type={`${currentProblem.type}`}
+            >
+              {currentProblem.equation.secondNumber}
+            </div>
+          </div>
         )}
-        <div></div>
       </div>
       <div style={{ textAlign: "center" }}>
-        <button onClick={() => setShowAnswer(!showAnswer)}>Show Answer</button>
+        <button onClick={() => setShowAnswer(!showAnswer)}>
+          {showAnswer ? "Return" : "Show Answer"}
+        </button>
         <button onClick={handleNext}>next</button>
       </div>
     </>
