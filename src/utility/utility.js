@@ -7,6 +7,8 @@ import {
   sentencePractice5b,
   wordList6,
   wordList7,
+  letterList8,
+  wordList9,
   combinedWordLists,
 } from "../data/wordLists";
 
@@ -75,6 +77,22 @@ export const changeList = (value) => {
         word: wordList7[0],
         type: "word",
         display: "Word List 7",
+      };
+    case "letterList8":
+      return {
+        list: letterList8,
+        length: letterList8.length,
+        word: letterList8[0],
+        type: "word",
+        display: "Letter List 8",
+      };
+    case "wordList9":
+      return {
+        list: wordList9,
+        length: wordList9.length,
+        word: wordList9[0],
+        type: "word",
+        display: "Word List 9",
       };
     case "combinedWordList":
       return {

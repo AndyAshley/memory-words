@@ -138,7 +138,7 @@
   color: #888;
 }
 
-@media screen and (min-width: 942px) {
+@media screen and (min-width: 900px) {
   .math_wrapper {
     display: grid;
     grid-template-rows: 1fr;
@@ -167,7 +167,7 @@
   }
 
   [data-type="math"] {
-    font-size: 15vw;
+    font-size: 17vw;
     margin: 0px;
   }
 }

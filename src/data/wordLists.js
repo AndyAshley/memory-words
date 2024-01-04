@@ -13,6 +13,8 @@ const sentencePractice5b = [
 ];
 const wordList6 = ["what", "in", "that", "it", "on", "as", "there"];
 const wordList7 = ["with", "his", "they", "at", "be", "this"];
+const letterList8 = ["x", "q", "y", "w", "z", "k", "j"];
+const wordList9 = ["not", "all", "were", "when", "your", "can"];
 
 // for the select dropdown
 const listSelectOptions = [
@@ -23,13 +25,24 @@ const listSelectOptions = [
   { value: "wordList5", label: "Word List 5" },
   { value: "sentencePractice5b", label: "Sentence Practice 5B" },
   { value: "wordList6", label: "Word List 6" },
-  { value: "wordList7", label: "Word List 7"},
+  { value: "wordList7", label: "Word List 7" },
+  { value: "letterList8", label: "Letter List 8" },
+  { value: "wordList9", label: "Word List 9" },
   { value: "combinedWordList", label: "All Words" },
 ];
 
 // combine all the word lists into one array
 const combinedWordLists = (
-  lists = [wordList1, wordList2, wordList3, wordList4, wordList5, wordList6, wordList7]
+  lists = [
+    wordList1,
+    wordList2,
+    wordList3,
+    wordList4,
+    wordList5,
+    wordList6,
+    wordList7,
+    wordList9,
+  ]
 ) => {
   let combinedList = [];
   lists.forEach((list) => {
@@ -48,6 +61,8 @@ export {
   sentencePractice5b,
   wordList6,
   wordList7,
+  letterList8,
+  wordList9,
   combinedWordLists,
   listSelectOptions,
 };
