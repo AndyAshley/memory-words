@@ -15,6 +15,7 @@ const wordList6 = ["what", "in", "that", "it", "on", "as", "there"];
 const wordList7 = ["with", "his", "they", "at", "be", "this"];
 const letterList8 = ["x", "q", "y", "w", "z", "k", "j"];
 const wordList9 = ["not", "all", "were", "when", "your", "can"];
+const wordList10 = ["there", "use", "an", "each", "which", "how"];
 
 // for the select dropdown
 const listSelectOptions = [
@@ -28,6 +29,7 @@ const listSelectOptions = [
   { value: "wordList7", label: "Word List 7" },
   { value: "letterList8", label: "Letter List 8" },
   { value: "wordList9", label: "Word List 9" },
+  { value: "wordList10", label: "Word List 10" },
   { value: "combinedWordList", label: "All Words" },
 ];
 
@@ -42,6 +44,7 @@ const combinedWordLists = (
     wordList6,
     wordList7,
     wordList9,
+    wordList10,
   ]
 ) => {
   let combinedList = [];
@@ -63,6 +66,7 @@ export {
   wordList7,
   letterList8,
   wordList9,
+  wordList10,
   combinedWordLists,
   listSelectOptions,
 };
