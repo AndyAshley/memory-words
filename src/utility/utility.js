@@ -10,6 +10,8 @@ import {
   letterList8,
   wordList9,
   wordList10,
+  wordList11,
+  wordList12,
   combinedWordLists,
 } from "../data/wordLists";
 
@@ -102,6 +104,22 @@ export const changeList = (value) => {
         word: wordList10[0],
         type: "word",
         display: "Word List 10",
+      };
+    case "wordList11":
+      return {
+        list: wordList11,
+        length: wordList11.length,
+        word: wordList11[0],
+        type: "word",
+        display: "Word List 11",
+      };
+    case "wordList12":
+      return {
+        list: wordList12,
+        length: wordList12.length,
+        word: wordList12[0],
+        type: "word",
+        display: "Word List 12",
       };
     case "combinedWordList":
       return {
