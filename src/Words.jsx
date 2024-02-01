@@ -21,6 +21,7 @@ const Words = () => {
       if (index === 0 && direction === "prev") {
         return list.length - 1;
       }
+      console.log(direction === "next" ? index + 1 : index - 1);
       return direction === "next" ? index + 1 : index - 1;
     };
 
@@ -33,6 +34,8 @@ const Words = () => {
   const handleListChange = (e) => {
     setCurrentList(changeList(e.target.value));
   };
+
+  console.log(currentList.list);
 
   return (
     <>

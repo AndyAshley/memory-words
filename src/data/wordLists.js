@@ -53,10 +53,19 @@ const combinedWordLists = (
     wordList12,
   ]
 ) => {
-  let combinedList = [];
+  const combinedList = [];
+  const duplicateCheck = new Set(); // to track words that have already been added
+
+  // loop through each list and add the words to the combined list if they are not already there
   lists.forEach((list) => {
-    combinedList = combinedList.concat(list);
+    list.forEach((item) => {
+      if (!duplicateCheck.has(item)) {
+        duplicateCheck.add(item);
+        combinedList.push(item);
+      }
+    });
   });
+
   return combinedList;
 };
 
