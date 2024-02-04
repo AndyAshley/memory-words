@@ -1,4 +1,4 @@
-import { getRandomEquation } from "./data/mathChallenges";
+import { getRandomEquation } from "../data/mathChallenges";
 import { useState } from "react";
 
 const Math = () => {
@@ -28,19 +28,13 @@ const Math = () => {
           <p data-type={`${currentProblem.type}`}>{currentProblem.answer}</p>
         ) : (
           <div div className="math_wrapper">
-            <div
-              className="first_number"
-              data-type={`${currentProblem.type}`}
-            >
+            <div className="first_number" data-type={`${currentProblem.type}`}>
               {currentProblem.equation.firstNumber}
             </div>
             <div className="operator" data-type={`${currentProblem.type}`}>
               {currentProblem.equation.operator}
             </div>
-            <div
-              className="second_number"
-              data-type={`${currentProblem.type}`}
-            >
+            <div className="second_number" data-type={`${currentProblem.type}`}>
               {currentProblem.equation.secondNumber}
             </div>
           </div>

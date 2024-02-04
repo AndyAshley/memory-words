@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { changeList } from "./utility/utility";
-import { wordList1, listSelectOptions } from "./data/wordLists";
+import { changeList } from "../utility/utility";
+import { wordList1, listSelectOptions } from "../data/wordLists";
 
 const Words = () => {
   const [currentList, setCurrentList] = useState({
