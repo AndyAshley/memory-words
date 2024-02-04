@@ -1,4 +1,5 @@
 // Word lists based on my sons take home sight word lists
+// wordList1-12 are the first 12 lists
 const wordList1 = ["is", "a", "like", "the", "went", "to"];
 const wordList2 = ["look", "for", "you", "I", "was", "we"];
 const wordList3 = ["she", "little", "have", "my", "said", "no"];
@@ -19,6 +20,9 @@ const wordList10 = ["there", "use", "an", "each", "which", "how"];
 const wordList11 = ["their", "if", "will", "up", "other", "about"];
 const wordList12 = ["out", "many", "then", "them", "these", "so"];
 
+// start of word list 13+
+const wordList13 = ["her", "would", "make", "him", "into", "time"];
+
 // for the select dropdown
 const listSelectOptions = [
   { value: "wordList1", label: "Word List 1" },
@@ -34,25 +38,14 @@ const listSelectOptions = [
   { value: "wordList10", label: "Word List 10" },
   { value: "wordList11", label: "Word List 11" },
   { value: "wordList12", label: "Word List 12" },
-  { value: "combinedWordList", label: "All Words" },
+  { value: "wordList13", label: "Word List 13" },
+  { value: "wordList1Through12", label: "Word List 1-12" },
+  { value: "wordList13Plus", label: "Word List 13+" },
+  { value: "allWordLists", label: "All Words" },
 ];
 
-// combine all the word lists into one array
-const combinedWordLists = (
-  lists = [
-    wordList1,
-    wordList2,
-    wordList3,
-    wordList4,
-    wordList5,
-    wordList6,
-    wordList7,
-    wordList9,
-    wordList10,
-    wordList11,
-    wordList12,
-  ]
-) => {
+// combine input word lists into one list
+const combineWordLists = (lists = []) => {
   const combinedList = [];
   const duplicateCheck = new Set(); // to track words that have already been added
 
@@ -69,6 +62,24 @@ const combinedWordLists = (
   return combinedList;
 };
 
+const wordList1Through12 = combineWordLists([
+  wordList1,
+  wordList2,
+  wordList3,
+  wordList4,
+  wordList5,
+  wordList6,
+  wordList7,
+  wordList9,
+  wordList10,
+  wordList11,
+  wordList12,
+]);
+
+const wordList13Plus = combineWordLists([wordList13]);
+
+const allWordLists = combineWordLists([wordList1Through12, wordList13Plus]);
+
 // export all the word lists
 export {
   wordList1,
@@ -84,6 +95,9 @@ export {
   wordList10,
   wordList11,
   wordList12,
-  combinedWordLists,
+  wordList13,
+  wordList1Through12,
+  wordList13Plus,
+  allWordLists,
   listSelectOptions,
 };

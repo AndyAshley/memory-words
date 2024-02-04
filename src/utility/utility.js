@@ -12,7 +12,10 @@ import {
   wordList10,
   wordList11,
   wordList12,
-  combinedWordLists,
+  wordList13,
+  wordList1Through12,
+  wordList13Plus,
+  allWordLists,
 } from "../data/wordLists";
 
 export const changeList = (value) => {
@@ -121,11 +124,35 @@ export const changeList = (value) => {
         type: "word",
         display: "Word List 12",
       };
-    case "combinedWordList":
+    case "wordList13":
       return {
-        list: combinedWordLists(),
-        length: combinedWordLists().length,
-        word: combinedWordLists()[0],
+        list: wordList13,
+        length: wordList13.length,
+        word: wordList13[0],
+        type: "word",
+        display: "Word List 13",
+      };
+    case "wordList1Through12":
+      return {
+        list: wordList1Through12,
+        length: wordList1Through12.length,
+        word: wordList1Through12[0],
+        type: "word",
+        display: "Word List 1-12",
+      };
+    case "wordList13Plus":
+      return {
+        list: wordList13Plus,
+        length: wordList13Plus.length,
+        word: wordList13Plus[0],
+        type: "word",
+        display: "Word List 13+",
+      };
+    case "allWordLists":
+      return {
+        list: allWordLists,
+        length: allWordLists.length,
+        word: allWordLists[0],
         type: "word",
         display: "All Words",
       };
