@@ -38,7 +38,7 @@ const Words = () => {
   console.log(currentList.list);
 
   return (
-    <>
+    <div id="word_container">
       <select id="selector" onChange={handleListChange}>
         {listSelectOptions.map((option) => (
           <option key={option.value} value={option.value}>
@@ -46,27 +46,27 @@ const Words = () => {
           </option>
         ))}
       </select>
-      <div id="main-container">
-        <button onClick={() => handleNextWord(currentList, "prev")}>
-          <img
-            src="/angle-right-icon.svg"
-            alt="arrow-prev"
-            className="arrow prev"
-          />
-        </button>
-        <p id="word-display" data-type={`${currentList.type}`}>
-          {currentList.word}
-        </p>
-        <button onClick={() => handleNextWord(currentList, "next")}>
-          <img src="/angle-right-icon.svg" alt="arrow-next" className="arrow" />
-        </button>
-      </div>
+      <button
+        onClick={() => handleNextWord(currentList, "prev")}
+        className="arrow prev"
+      >
+        <img src="/angle-left-icon.png" alt="arrow-prev" />
+      </button>
+      <p id="word-display" data-type={`${currentList.type}`}>
+        {currentList.word}
+      </p>
+      <button
+        onClick={() => handleNextWord(currentList, "next")}
+        className="arrow next"
+      >
+        <img src="/angle-right-icon.png" alt="arrow-next" className="arrow" />
+      </button>
       <p id="index-counter">
         {currentList.display} - [
         {currentList.list.indexOf(currentList.word) + 1} /{" "}
         {currentList.list.length}]
       </p>
-    </>
+    </div>
   );
 };
 
