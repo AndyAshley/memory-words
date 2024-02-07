@@ -18,12 +18,16 @@
   margin-bottom: 2rem;
 }
 
-.navlink {
-  color: #fafcff;
+.nav-link {
+  color: #c7c7c7;
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 500;
   transition: color 0.3s ease;
+}
+
+.nav-link.active {
+  color: #fafcff;
 }
 
 .navlink a {

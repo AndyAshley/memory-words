@@ -9,22 +9,25 @@ const Navigation = () => {
       <div className={styles.navlink}>
         <NavLink
           to="/"
-          className={styles["nav-link"]}
-          activeClassName={styles["active"]}
+          className={({ isActive }) =>
+            [styles["nav-link"], isActive ? styles["active"] : ""].join(" ")
+          }
         >
           Home
         </NavLink>
         <NavLink
           to="/math"
-          className={styles["nav-link"]}
-          activeClassName={styles["active"]}
+          className={({ isActive }) =>
+            [styles["nav-link"], isActive ? styles["active"] : ""].join(" ")
+          }
         >
           Math
         </NavLink>
         <NavLink
           to="/words"
-          className={styles["nav-link"]}
-          activeClassName={styles["active"]}
+          className={({ isActive }) =>
+            [styles["nav-link"], isActive ? styles["active"] : ""].join(" ")
+          }
         >
           Words
         </NavLink>
