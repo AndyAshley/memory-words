@@ -14,6 +14,7 @@ import {
   wordList12,
   wordList13,
   wordList14,
+  wordList15,
   wordList1Through12,
   wordList13Plus,
   allWordLists,
@@ -140,6 +141,14 @@ export const changeList = (value) => {
         word: wordList14[0],
         type: "word",
         display: "Word List 14",
+      };
+    case "wordList15":
+      return {
+        list: wordList15,
+        length: wordList15.length,
+        word: wordList15[0],
+        type: "word",
+        display: "Word List 15",
       };
     case "wordList1Through12":
       return {
