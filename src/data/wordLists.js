@@ -24,6 +24,14 @@ const wordList12 = ["out", "many", "then", "them", "these", "so"];
 const wordList13 = ["her", "would", "make", "him", "into", "time"];
 const wordList14 = ["has", "two", "more", "write", "go", "see"];
 const wordList15 = ["number", "way", "could", "people", "than", "first"];
+const sentencePractice15b = [
+  "I can see a bus.",
+  "The dog is black.",
+  "She had size bugs.",
+  "Her hat is orange.",
+  "I had a map.",
+];
+const wordList16 = ["water", "been", "called", "who", "am", "its"];
 
 // for the select dropdown
 const listSelectOptions = [
@@ -41,8 +49,10 @@ const listSelectOptions = [
   { value: "wordList11", label: "Word List 11" },
   { value: "wordList12", label: "Word List 12" },
   { value: "wordList13", label: "Word List 13" },
-  { value: "wordList14", label: "Word List 14"},
-  { value: "wordList15", label: "Word List 15"},
+  { value: "wordList14", label: "Word List 14" },
+  { value: "wordList15", label: "Word List 15" },
+  { value: "sentencePractice15b", label: "Sentence Practice 15B" },
+  { value: "wordList16", label: "Word List 16" },
   { value: "wordList1Through12", label: "Word List 1-12" },
   { value: "wordList13Plus", label: "Word List 13+" },
   { value: "allWordLists", label: "All Words" },
@@ -80,7 +90,12 @@ const wordList1Through12 = combineWordLists([
   wordList12,
 ]);
 
-const wordList13Plus = combineWordLists([wordList13, wordList14, wordList15]);
+const wordList13Plus = combineWordLists([
+  wordList13,
+  wordList14,
+  wordList15,
+  wordList16,
+]);
 
 const allWordLists = combineWordLists([wordList1Through12, wordList13Plus]);
 
@@ -102,6 +117,8 @@ export {
   wordList13,
   wordList14,
   wordList15,
+  sentencePractice15b,
+  wordList16,
   wordList1Through12,
   wordList13Plus,
   allWordLists,

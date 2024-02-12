@@ -15,6 +15,8 @@ import {
   wordList13,
   wordList14,
   wordList15,
+  sentencePractice15b,
+  wordList16,
   wordList1Through12,
   wordList13Plus,
   allWordLists,
@@ -149,6 +151,22 @@ export const changeList = (value) => {
         word: wordList15[0],
         type: "word",
         display: "Word List 15",
+      };
+    case "sentencePractice15b":
+      return {
+        list: sentencePractice15b,
+        length: sentencePractice15b.length,
+        word: sentencePractice15b[0],
+        type: "sentence",
+        display: "Sentence Practice 15B",
+      };
+    case "wordList16":
+      return {
+        list: wordList16,
+        length: wordList16.length,
+        word: wordList16[0],
+        type: "word",
+        display: "Word List 16",
       };
     case "wordList1Through12":
       return {
