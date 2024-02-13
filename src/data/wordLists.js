@@ -32,6 +32,7 @@ const sentencePractice15b = [
   "I had a map.",
 ];
 const wordList16 = ["water", "been", "called", "who", "am", "its"];
+const wordList17 = ["now", "find", "long", "down", "day", "did"];
 
 // for the select dropdown
 const listSelectOptions = [
@@ -53,6 +54,7 @@ const listSelectOptions = [
   { value: "wordList15", label: "Word List 15" },
   { value: "sentencePractice15b", label: "Sentence Practice 15B" },
   { value: "wordList16", label: "Word List 16" },
+  { value: "wordList17", label: "Word List 17" },
   { value: "wordList1Through12", label: "Word List 1-12" },
   { value: "wordList13Plus", label: "Word List 13+" },
   { value: "allWordLists", label: "All Words" },
@@ -95,6 +97,7 @@ const wordList13Plus = combineWordLists([
   wordList14,
   wordList15,
   wordList16,
+  wordList17,
 ]);
 
 const allWordLists = combineWordLists([wordList1Through12, wordList13Plus]);
@@ -119,6 +122,7 @@ export {
   wordList15,
   sentencePractice15b,
   wordList16,
+  wordList17,
   wordList1Through12,
   wordList13Plus,
   allWordLists,

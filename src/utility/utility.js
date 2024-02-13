@@ -17,10 +17,25 @@ import {
   wordList15,
   sentencePractice15b,
   wordList16,
+  wordList17,
   wordList1Through12,
   wordList13Plus,
   allWordLists,
 } from "../data/wordLists";
+
+// lets make a single function that handles the list to return instead of a switch statement
+// this will make it easier to add new lists in the future
+const changelist = (value) => {
+  let type = value.includes("sentence") ? "sentence" : "word";
+
+  return {
+    list: value,
+    length: value.length,
+    word: value[0],
+    type: type,
+    display: value,
+  };
+};
 
 export const changeList = (value) => {
   switch (value) {
@@ -167,6 +182,14 @@ export const changeList = (value) => {
         word: wordList16[0],
         type: "word",
         display: "Word List 16",
+      };
+    case "wordList17":
+      return {
+        list: wordList17,
+        length: wordList17.length,
+        word: wordList17[0],
+        type: "word",
+        display: "Word List 17",
       };
     case "wordList1Through12":
       return {
