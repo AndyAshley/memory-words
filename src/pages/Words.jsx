@@ -35,8 +35,6 @@ const Words = () => {
     setCurrentList(changeList(e.target.value));
   };
 
-  console.log(currentList.list);
-
   return (
     <div id="word_container">
       <select id="selector" onChange={handleListChange}>
