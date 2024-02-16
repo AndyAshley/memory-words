@@ -20,6 +20,7 @@ import {
   wordList17,
   wordList18,
   wordList19,
+  wordList20,
   wordList1Through12,
   wordList13Plus,
   allWordLists,
@@ -208,6 +209,14 @@ export const changeList = (value) => {
         word: wordList19[0],
         type: "word",
         display: "Word List 19",
+      };
+    case "wordList20":
+      return {
+        list: wordList20,
+        length: wordList20.length,
+        word: wordList20[0],
+        type: "word",
+        display: "Word List 20",
       };
     case "wordList1Through12":
       return {
