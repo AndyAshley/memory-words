@@ -36,6 +36,7 @@ const wordList17 = ["now", "find", "long", "down", "day", "did"];
 const wordList18 = ["come", "made", "may", "part", "over", "new"];
 const wordList19 = ["sound", "take", "only", "work", "know", "place"];
 const wordList20 = ["years", "live", "back", "give", "most", "very"];
+const wordList21 = ["after", "things", "our", "just", "name", "good"];
 
 // for the select dropdown
 const listSelectOptions = [
@@ -61,6 +62,7 @@ const listSelectOptions = [
   { value: "wordList18", label: "Word List 18" },
   { value: "wordList19", label: "Word List 19" },
   { value: "wordList20", label: "Word List 20" },
+  { value: "wordList21", label: "Word List 21" },
   { value: "wordList1Through12", label: "Word List 1-12" },
   { value: "wordList13Plus", label: "Word List 13+" },
   { value: "allWordLists", label: "All Words" },
@@ -107,6 +109,7 @@ const wordList13Plus = combineWordLists([
   wordList18,
   wordList19,
   wordList20,
+  wordList21,
 ]);
 
 const allWordLists = combineWordLists([wordList1Through12, wordList13Plus]);
@@ -135,6 +138,7 @@ export {
   wordList18,
   wordList19,
   wordList20,
+  wordList21,
   wordList1Through12,
   wordList13Plus,
   allWordLists,

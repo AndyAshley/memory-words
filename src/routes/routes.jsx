@@ -14,12 +14,12 @@ export const routes = [
       {
         path: "/words",
         element: <Words />,
-        errorElement: <h1>404</h1>,
+        errorElement: <PageNotFound />,
       },
       {
         path: "/math",
         element: <Math />,
-        errorElement: <h1>404</h1>,
+        errorElement: <PageNotFound />,
       },
     ],
   },
