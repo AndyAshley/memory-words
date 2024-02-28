@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { changeList } from "../utility/utility";
-import { wordList1, listSelectOptions } from "../data/wordLists";
+import { listArray, listSelectOptions } from "../data/wordLists";
 
 const Words = () => {
+  const wordList1 = listArray[0].wordList1.list;
   const [currentList, setCurrentList] = useState({
     list: wordList1,
     length: wordList1.length,
     word: wordList1[0],
-    type: "word",
-    display: "Word List 1",
+    type: listArray[0].wordList1.type,
+    display: listArray[0].wordList1.display,
   });
 
   const handleNextWord = (input, direction) => {
@@ -36,7 +37,7 @@ const Words = () => {
   };
 
   return (
-    <div id="word_container">
+    <section id="word_container">
       <select id="selector" onChange={handleListChange}>
         {listSelectOptions.map((option) => (
           <option key={option.value} value={option.value}>
@@ -64,7 +65,7 @@ const Words = () => {
         {currentList.list.indexOf(currentList.word) + 1} /{" "}
         {currentList.list.length}]
       </p>
-    </div>
+    </section>
   );
 };
 

@@ -23,7 +23,7 @@ const Math = () => {
 
   return (
     <>
-      <div id="math-container">
+      <section id="math-container">
         {showAnswer ? (
           <p data-type={`${currentProblem.type}`}>{currentProblem.answer}</p>
         ) : (
@@ -39,7 +39,7 @@ const Math = () => {
             </div>
           </div>
         )}
-      </div>
+      </section>
       <div style={{ textAlign: "center" }}>
         <button onClick={() => setShowAnswer(!showAnswer)}>
           {showAnswer ? "Return" : "Show Answer"}

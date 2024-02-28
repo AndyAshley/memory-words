@@ -1,5 +1,4 @@
 // Word lists based on my sons take home sight word lists
-// wordList1-12 are the first 12 lists
 const wordList1 = ["is", "a", "like", "the", "went", "to"];
 const wordList2 = ["look", "for", "you", "I", "was", "we"];
 const wordList3 = ["she", "little", "have", "my", "said", "no"];
@@ -19,8 +18,6 @@ const wordList9 = ["not", "all", "were", "when", "your", "can"];
 const wordList10 = ["there", "use", "an", "each", "which", "how"];
 const wordList11 = ["their", "if", "will", "up", "other", "about"];
 const wordList12 = ["out", "many", "then", "them", "these", "so"];
-
-// start of word list 13+
 const wordList13 = ["her", "would", "make", "him", "into", "time"];
 const wordList14 = ["has", "two", "more", "write", "go", "see"];
 const wordList15 = ["number", "way", "could", "people", "than", "first"];
@@ -37,9 +34,10 @@ const wordList18 = ["come", "made", "may", "part", "over", "new"];
 const wordList19 = ["sound", "take", "only", "work", "know", "place"];
 const wordList20 = ["years", "live", "back", "give", "most", "very"];
 const wordList21 = ["after", "things", "our", "just", "name", "good"];
+const wordList22 = ["sentence", "man", "think", "say", "great", "help"];
 
 // for the select dropdown
-const listSelectOptions = [
+export const listSelectOptions = [
   { value: "wordList1", label: "Word List 1" },
   { value: "wordList2", label: "Word List 2" },
   { value: "wordList3", label: "Word List 3" },
@@ -63,6 +61,7 @@ const listSelectOptions = [
   { value: "wordList19", label: "Word List 19" },
   { value: "wordList20", label: "Word List 20" },
   { value: "wordList21", label: "Word List 21" },
+  { value: "wordList22", label: "Word List 22" },
   { value: "wordList1Through12", label: "Word List 1-12" },
   { value: "wordList13Plus", label: "Word List 13+" },
   { value: "allWordLists", label: "All Words" },
@@ -110,37 +109,63 @@ const wordList13Plus = combineWordLists([
   wordList19,
   wordList20,
   wordList21,
+  wordList22,
 ]);
 
 const allWordLists = combineWordLists([wordList1Through12, wordList13Plus]);
 
-// export all the word lists
-export {
-  wordList1,
-  wordList2,
-  wordList3,
-  wordList4,
-  wordList5,
-  sentencePractice5b,
-  wordList6,
-  wordList7,
-  letterList8,
-  wordList9,
-  wordList10,
-  wordList11,
-  wordList12,
-  wordList13,
-  wordList14,
-  wordList15,
-  sentencePractice15b,
-  wordList16,
-  wordList17,
-  wordList18,
-  wordList19,
-  wordList20,
-  wordList21,
-  wordList1Through12,
-  wordList13Plus,
-  allWordLists,
-  listSelectOptions,
-};
+export const listArray = [
+  { wordList1: { list: wordList1, display: "Word List 1", type: "word" } },
+  { wordList2: { list: wordList2, display: "Word List 2", type: "word" } },
+  { wordList3: { list: wordList3, display: "Word List 3", type: "word" } },
+  { wordList4: { list: wordList4, display: "Word List 4", type: "word" } },
+  { wordList5: { list: wordList5, display: "Word List 5", type: "word" } },
+  {
+    sentencePractice5b: {
+      list: sentencePractice5b,
+      display: "Sentence Practice 5B",
+      type: "sentence",
+    },
+  },
+  { wordList6: { list: wordList6, display: "Word List 6", type: "word" } },
+  { wordList7: { list: wordList7, display: "Word List 7", type: "word" } },
+  {
+    letterList8: { list: letterList8, display: "Letter List 8", type: "word" },
+  },
+  { wordList9: { list: wordList9, display: "Word List 9", type: "word" } },
+  { wordList10: { list: wordList10, display: "Word List 10", type: "word" } },
+  { wordList11: { list: wordList11, display: "Word List 11", type: "word" } },
+  { wordList12: { list: wordList12, display: "Word List 12", type: "word" } },
+  { wordList13: { list: wordList13, display: "Word List 13", type: "word" } },
+  { wordList14: { list: wordList14, display: "Word List 14", type: "word" } },
+  { wordList15: { list: wordList15, display: "Word List 15", type: "word" } },
+  {
+    sentencePractice15b: {
+      list: sentencePractice15b,
+      display: "Sentence Practice 15B",
+      type: "sentence",
+    },
+  },
+  { wordList16: { list: wordList16, display: "Word List 16", type: "word" } },
+  { wordList17: { list: wordList17, display: "Word List 17", type: "word" } },
+  { wordList18: { list: wordList18, display: "Word List 18", type: "word" } },
+  { wordList19: { list: wordList19, display: "Word List 19", type: "word" } },
+  { wordList20: { list: wordList20, display: "Word List 20", type: "word" } },
+  { wordList21: { list: wordList21, display: "Word List 21", type: "word" } },
+  { wordList22: { list: wordList22, display: "Word List 22", type: "word" } },
+  {
+    wordList1Through12: {
+      list: wordList1Through12,
+      display: "Word List 1-12",
+      type: "word",
+    },
+  },
+  {
+    wordList13Plus: {
+      list: wordList13Plus,
+      display: "Word List 13+",
+      type: "word",
+    },
+  },
+  { allWordLists: { list: allWordLists, display: "All Words", type: "word" } },
+];
