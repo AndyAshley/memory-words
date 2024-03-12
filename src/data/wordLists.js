@@ -37,6 +37,8 @@ const wordList21 = ["after", "things", "our", "just", "name", "good"];
 const wordList22 = ["sentence", "man", "think", "say", "great", "help"];
 const wordList23 = ["through", "much", "before", "line", "right", "too"];
 const wordList24 = ["means", "old", "any", "same", "tell", "boy"];
+const wordList25 = ["follow", "came", "want", "show", "also", "around"];
+const wordList26 = ["form", "three", "small", "set", "end", "does"];
 
 // for the select dropdown
 export const listSelectOptions = [
@@ -66,8 +68,11 @@ export const listSelectOptions = [
   { value: "wordList22", label: "Word List 22" },
   { value: "wordList23", label: "Word List 23" },
   { value: "wordList24", label: "Word List 24" },
+  { value: "wordList25", label: "Word List 25" },
+  { value: "wordList26", label: "Word List 26" },
   { value: "wordList1Through12", label: "Word List 1-12" },
-  { value: "wordList13Plus", label: "Word List 13-24" },
+  { value: "wordList13Through24", label: "Word List 13-24" },
+  { value: "wordList24Through36", label: "Word List 24-36" },
   { value: "allWordLists", label: "All Words" },
 ];
 
@@ -118,9 +123,12 @@ const wordList13Through24 = combineWordLists([
   wordList24,
 ]);
 
+const wordList24Through36 = combineWordLists([wordList25, wordList26]);
+
 const allWordLists = combineWordLists([
   wordList1Through12,
   wordList13Through24,
+  wordList24Through36,
 ]);
 
 export const listArray = [
@@ -164,6 +172,8 @@ export const listArray = [
   { wordList22: { list: wordList22, display: "Word List 22", type: "word" } },
   { wordList23: { list: wordList23, display: "Word List 23", type: "word" } },
   { wordList24: { list: wordList24, display: "Word List 24", type: "word" } },
+  { wordList25: { list: wordList25, display: "Word List 25", type: "word" } },
+  { wordList26: { list: wordList26, display: "Word List 26", type: "word" } },
   {
     wordList1Through12: {
       list: wordList1Through12,
@@ -172,9 +182,16 @@ export const listArray = [
     },
   },
   {
-    wordList13Plus: {
+    wordList13Through24: {
       list: wordList13Through24,
-      display: "Word List 13+",
+      display: "Word List 13-24",
+      type: "word",
+    },
+  },
+  {
+    wordList24Through36: {
+      list: wordList24Through36,
+      display: "Word List 24-36",
       type: "word",
     },
   },
